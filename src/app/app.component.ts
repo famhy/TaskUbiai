@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { range } from 'rxjs';
 
+import {AnnotationService} from "./service/annotation.service"
+import {Annotation} from "../Annotation"
+import {Document} from "../Document"
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -53,16 +55,18 @@ export class AppComponent {
     },
   ];
 
-  annotation = [
-    {
-      start : "",
-      end : "",
-      lable:"",
-      text:"",
-    }
-  ];
+  annotation : Annotation ={
+    start: 0,
+    end: 0,
+    lable: '',
+    text: ''
+  }
+  
+  spanId=0;
+  desc :Document[]=[]
+
   description =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel ';
+    '3+ years Swift & Objective-C and experience with IOS internals Experience building an entire app from scratch and ideally a portfolio of apps featured in the app Store Someone who knows every trick in the book on UI transition , network communication and memory / battery efficiency Strong UI / design skill experience is a plus';
 
     descriptionTable=this.description.split(' ')
   innerDescription =this.description;  
@@ -91,6 +95,8 @@ export class AppComponent {
     console.log(window.getSelection()?.getRangeAt(0).endOffset);
     const newparent=document.createElement('span')
     newparent.style.cssText='background-color:'+this.lableList[this.whosSelected()].color+'; padding:5px 7px 5px 7px; margin-left:5px ; border-radius:5px;'
+    newparent.setAttribute("id",this.spanId.toString())
+    this.spanId++;
     const lableSpan=document.createElement("span")
     lableSpan.style.cssText="background-color: white; padding:2px ; margin-left:5px"
     // newparent.insertBefore()
@@ -113,18 +119,27 @@ export class AppComponent {
     }
   
 
-    this.annotation.push({
-      start : start.toString(),
-      end : end.toString(),
-      lable: this.lableList[this.whosSelected()].lable,
-      text : selct?.toString()||"",
-    })
+    // this.annotation.push({
+    //   start : start.toString(),
+    //   end : end.toString(),
+    //   lable: this.lableList[this.whosSelected()].lable,
+    //   text : selct?.toString()||"",
+    // })
+
+    this.annotation.start=start
+    this.annotation.end=end
+    this.annotation.lable=this.lableList[this.whosSelected()].lable
+    this.annotation.text=selct?.toString()||""
     console.log(selct,start,end)
     console.log(this.annotation)
+    this.annotationService.addAnnotation(this.annotation).subscribe((annotation)=>(console.log(annotation)))
 
   }
 
-  constructor(private s: DomSanitizer) {}
+  constructor(private s: DomSanitizer, private annotationService :AnnotationService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(){
+    this.annotationService.getDocement().subscribe((description)=>(this.desc=description))
+     console.log(this.desc)
+  }
 }

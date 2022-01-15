@@ -31,6 +31,12 @@ padding: 20px;
     opacity: 1 !important ;
 }
 
-.selected{
-    color:blue;
+.container{
+-webkit-box-shadow: 0px 0px 16px -3px #000000; 
+box-shadow: 0px 0px 16px -3px #000000;
+}
+
+.text{
+    line-height : 4;
+    padding: 5px 15px;
 }

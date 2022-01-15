@@ -1,0 +1,44 @@
+{
+  "document": [
+    {
+      "text": "text"
+    }
+  ],
+  "annotation": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 0,
+      "lable": "text",
+      "text": "text"
+    },
+    {
+      "start": 39,
+      "end": 50,
+      "lable": "Skill",
+      "text": "adipisicing",
+      "id": 2
+    },
+    {
+      "start": 27,
+      "end": 38,
+      "lable": "Experience",
+      "text": "consectetur",
+      "id": 3
+    },
+    {
+      "start": 63,
+      "end": 74,
+      "lable": "Experience",
+      "text": "Experience ",
+      "id": 4
+    },
+    {
+      "start": 168,
+      "end": 179,
+      "lable": "Experience",
+      "text": "Someone who",
+      "id": 5
+    }
+  ]
+}

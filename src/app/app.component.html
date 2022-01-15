@@ -1,16 +1,19 @@
 <div class="task-ubiai">
-  <div class="lable-list">
-    <div  [ngStyle]="{ 'background-color': item.color }" (click)="onClick(i)" *ngFor="let item of lableList; let i = index" class="lable-item">
-    <span>{{item.lable}}</span>
-    <img [ngClass]="{'check-display': item.isSelected}" src="../assets/check-solid.svg">
+  <div class="container">
+    <div class="lable-list">
+      <div  [ngStyle]="{ 'background-color': item.color }" (click)="onClick(i)" *ngFor="let item of lableList; let i = index" class="lable-item">
+      <span>{{item.lable}}</span>
+      <img [ngClass]="{'check-display': item.isSelected}" src="../assets/check-solid.svg">
+    </div>
+    </div>
+    <!-- <div  class="text" >
+      <span (click)="hundel($event)" *ngFor="let item of descriptionTable; let i = index" [attr.id]="i" >{{item}} </span>
+    </div> -->
+  
+    <div  (click)="hundel($event)" [innerHtml]="innerDescription| safeHtml" class="text" >
+      
+    </div>
   </div>
-  </div>
-  <div  class="text" >
-    <span (click)="hundel($event)" *ngFor="let item of descriptionTable; let i = index" [attr.id]="i" >{{item}} </span>
-  </div>
-
-  <div  (click)="hundel($event)" [innerHtml]="innerDescription| safeHtml" class="text" >
-    
-  </div>
+ 
 
 </div>
