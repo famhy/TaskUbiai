@@ -75,3 +75,11 @@ padding: 20px;
     text-align: justify;
     line-height: 2.5rem;
 }
+
+.text span:hover img{
+    visibility:visible;
+}
+
+.annotation:hover{
+    background-color: blue;
+}
