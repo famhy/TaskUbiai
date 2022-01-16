@@ -99,19 +99,24 @@ export class AppComponent {
     this.spanId++;
     const lableSpan=document.createElement("span")
     lableSpan.style.cssText="background-color: white; padding:2px ; margin-left:5px"
+    let deleteBtn =document.createElement("span");
+      deleteBtn.appendChild(document.createTextNode("x"))
+      deleteBtn.onclick=()=>{
+        console.log("gi")
+        // this.parentElement.removeChild(this);
+
+      }
     // newparent.insertBefore()
     var range= window.getSelection()?.getRangeAt(0).cloneRange();
     console.log(window.getSelection()?.getRangeAt(0).cloneRange())
     if(range)
     range.surroundContents(newparent);
-    console.log(lableSpan.appendChild(document.createTextNode(this.lableList[this.whosSelected()].lable)))
+    console.log(deleteBtn)
     newparent.insertAdjacentHTML("beforeend","<span  style=\'background-color: white; padding:2px ; margin-left:5px \'>" + this.lableList[this.whosSelected()].lable+"</span>")
-    // parent.appendChild(lableSpan.appendChild(document.createTextNode(this.lableList[this.whosSelected()].lable)))
-      // this.description.slice(0, startOffset) +
-      // '<span class="selected" style=\'background-color: red; padding:5px 7px 5px 7px; margin-left:5px ; border-reduis:3px;\'>' +
-      // this.description.slice(startOffset, endOffset).trim() + "<span  style=\'background-color: white; padding:2px ; margin-left:5px \'>" + this.lableList[this.whosSelected()].lable+"</span>"+
-      // '</span>' +
-      // this.description.slice(endOffset, this.description.length);
+    // newparent.insertAdjacentHTML("beforeend","<span onClick=\"OnDelete()\"  style=\'background-color: white; padding:2px ; margin-left:5px;cursor:pointer; \'> x </span>")
+    newparent.insertAdjacentHTML("beforeend",deleteBtn.textContent||"")
+
+    
     let start = this.description.indexOf(selct||"")
     let end=0
     if(selct?.length!=undefined){
@@ -135,7 +140,10 @@ export class AppComponent {
     this.annotationService.addAnnotation(this.annotation).subscribe((annotation)=>(console.log(annotation)))
 
   }
-
+ 
+  OnDelete(){
+    console.log("hi")
+  }
   constructor(private s: DomSanitizer, private annotationService :AnnotationService) {}
 
   ngOnInit(){

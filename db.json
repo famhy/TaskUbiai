@@ -39,6 +39,174 @@
       "lable": "Experience",
       "text": "Someone who",
       "id": 5
+    },
+    {
+      "start": 180,
+      "end": 185,
+      "lable": "Skill",
+      "text": "knows",
+      "id": 6
+    },
+    {
+      "start": 192,
+      "end": 200,
+      "lable": "Skill",
+      "text": "trick in",
+      "id": 7
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "lable": "Skill",
+      "text": " design",
+      "id": 8
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 9
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 10
+    },
+    {
+      "start": 167,
+      "end": 175,
+      "lable": "Skill",
+      "text": " Someone",
+      "id": 11
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 12
+    },
+    {
+      "start": 255,
+      "end": 261,
+      "lable": "Skill",
+      "text": "memory",
+      "id": 13
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 14
+    },
+    {
+      "start": 74,
+      "end": 82,
+      "lable": "Skill",
+      "text": "building",
+      "id": 15
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 16
+    },
+    {
+      "start": 192,
+      "end": 197,
+      "lable": "Skill",
+      "text": "trick",
+      "id": 17
+    },
+    {
+      "start": 53,
+      "end": 62,
+      "lable": "Skill",
+      "text": "internals",
+      "id": 18
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 19
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 20
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 21
+    },
+    {
+      "start": 180,
+      "end": 185,
+      "lable": "Skill",
+      "text": "knows",
+      "id": 22
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 23
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 24
+    },
+    {
+      "start": -1,
+      "end": 15,
+      "lable": "Skill",
+      "text": "expSkillxerience",
+      "id": 25
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 26
+    },
+    {
+      "start": 229,
+      "end": 236,
+      "lable": "Skill",
+      "text": "network",
+      "id": 27
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "lable": "Skill",
+      "text": "",
+      "id": 28
+    },
+    {
+      "start": 53,
+      "end": 62,
+      "lable": "Skill",
+      "text": "internals",
+      "id": 29
     }
   ]
 }

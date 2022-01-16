@@ -1,19 +1,31 @@
 <div class="task-ubiai">
   <div class="container">
-    <div class="lable-list">
-      <div  [ngStyle]="{ 'background-color': item.color }" (click)="onClick(i)" *ngFor="let item of lableList; let i = index" class="lable-item">
-      <span>{{item.lable}}</span>
-      <img [ngClass]="{'check-display': item.isSelected}" src="../assets/check-solid.svg">
+    <div class="left">
+      <h2>The Easy Way to Create Your Annotations</h2>
+      <hr>
+      <p>With UBIAI text annotation tool you can perform named entity recognition (NER), relation extraction and document classification all in the same interface. Unlike other tools, UBIAI enables you to create nested and overlapping entities containing multiple relations.</p>
+      <p>Check our live demo for more in depth annotations.</p>
     </div>
-    </div>
-    <!-- <div  class="text" >
-      <span (click)="hundel($event)" *ngFor="let item of descriptionTable; let i = index" [attr.id]="i" >{{item}} </span>
-    </div> -->
-  
-    <div  (click)="hundel($event)" [innerHtml]="innerDescription| safeHtml" class="text" >
+    <div class="right">
+      <div class="cont">
+        <div class="lable-list">
+          <div  [ngStyle]="{ 'background-color': item.color }" (click)="onClick(i)" *ngFor="let item of lableList; let i = index" class="lable-item">
+          <span>{{item.lable}}</span>
+          <img [ngClass]="{'check-display': item.isSelected}" src="../assets/check-solid.svg">
+        </div>
+        </div>
+        <!-- <div  class="text" >
+          <span (click)="hundel($event)" *ngFor="let item of descriptionTable; let i = index" [attr.id]="i" >{{item}} </span>
+        </div> -->
       
+        <div  (click)="hundel($event)" [innerHtml]="innerDescription| safeHtml" class="text" >
+          
+        </div>
+      </div>
+    
     </div>
-  </div>
- 
+   
+    </div>
+   
 
 </div>
